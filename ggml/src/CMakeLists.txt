@@ -1,5 +1,8 @@
 include(CheckCXXCompilerFlag)
 
+# Seems needed on gcc 8 (OSL)
+link_libraries(stdc++fs)
+
 add_compile_definitions(GGML_SCHED_MAX_COPIES=${GGML_SCHED_MAX_COPIES})
 
 # enable libstdc++ assertions for debug builds
